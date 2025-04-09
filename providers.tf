@@ -9,9 +9,9 @@
 
 #  }
 #backend "azurerm" {
-#      resource_group_name  = "remote"
-#      storage_account_name = "boboguguruyole"
-#      container_name       = "containertfstate"
+#      resource_group_name  = "tfstate"
+#      storage_account_name = "lilitfstate"
+#      container_name       = "tfstate"
 #      key                  = "terraform.tfstate"
 #  }
 
