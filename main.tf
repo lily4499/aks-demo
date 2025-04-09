@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "arg" {
 
 # Create Azure Container Registry
 resource "azurerm_container_registry" "acr" {
-  name                = "boboacr"
+  name                = "liliacr"
   resource_group_name = azurerm_resource_group.arg.name
   location            = azurerm_resource_group.arg.location
   sku                 = "Standard"
@@ -15,14 +15,14 @@ resource "azurerm_container_registry" "acr" {
 
 # Create AKS Cluster and Grant ACR Pull acess
 resource "azurerm_kubernetes_cluster" "aks" {
-  name                = "bobo_cluster"
+  name                = "lili_cluster"
   location            = azurerm_resource_group.arg.location
   resource_group_name = azurerm_resource_group.arg.name
-  dns_prefix          = "karoaks"
+  dns_prefix          = "liliaks"
 
   default_node_pool {
     name       = "default"
-    node_count = 3
+    node_count = 1
     vm_size    = "Standard_A2_v2"
   }
 
